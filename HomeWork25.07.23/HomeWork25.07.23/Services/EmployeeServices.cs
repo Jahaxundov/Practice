@@ -10,15 +10,15 @@ namespace HomeWork25._07._23.Services
 {
     internal class EmployeeServices
     {
-        public void GetBySalary(int salary)
+        public void GetBySalary(int firstSalary,int secondSalary)
         {
             var employees = GetEmployees();
 
             foreach (var item in employees)
             {
-                if ( item.Salary > 1000 && item.Salary < 2000)
+                if ( item.Salary > firstSalary && item.Salary < secondSalary)
                 {
-                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item.Name +","+ item.Surname+ "," + item.Age);
                     
                 }
             }
@@ -32,7 +32,7 @@ namespace HomeWork25._07._23.Services
                 Name = "Sharaf",
                 Surname = "Tanzinli",
                 Age = 26,
-                Salary = 1700
+                Salary = 2700
             };
 
             Employee employee2 = new()

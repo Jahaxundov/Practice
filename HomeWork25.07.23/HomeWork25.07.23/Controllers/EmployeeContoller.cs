@@ -12,9 +12,10 @@ namespace HomeWork25._07._23.Controllers
         public void SearchBySalary()
         {
             EmployeeServices employeeService = new();
-            Console.WriteLine("Salary daxil et");
-            int salary = Convert.ToInt32(Console.ReadLine());
-            employeeService.GetBySalary(salary);
+            int firstSalary = 1000;
+            int secondSalary = 2000;
+           
+            employeeService.GetBySalary(firstSalary,secondSalary);
         }
     }
 }
